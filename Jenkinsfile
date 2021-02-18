@@ -8,7 +8,7 @@ pipeline {
             steps {
                 git(url: 'https://github.com/darealmc/some_java.git', branch: 'master')
             }
-        },
+        }
         stage('Second Step') {
             steps {
                 echo "Second step"
