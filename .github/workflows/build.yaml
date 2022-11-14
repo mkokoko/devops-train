@@ -1,0 +1,19 @@
+name: CI
+
+on:  push
+
+
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+
+            - uses: azure/setup-helm@v3
+              with:
+                version: 'v3.8.1' # default is latest (stable)
+                token: ${{ secrets.GITHUB_TOKEN }} # only needed if version is 'latest'
+              id: install
