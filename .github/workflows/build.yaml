@@ -17,3 +17,6 @@ jobs:
                 version: 'v3.8.1' # default is latest (stable)
                 token: ${{ secrets.GITHUB_TOKEN }} # only needed if version is 'latest'
               id: install
+
+            - name: check helm chart
+              run: helm lint .github/workflows/helm
