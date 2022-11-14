@@ -1,6 +1,7 @@
 apiVersion: v2
 name: new
 description: A Helm chart for Kubernetes
+icon: https://www.pngkey.com/png/detail/335-3355322_online-application-icon.png
 
 # A chart can be either an 'application' or a 'library' chart.
 #
